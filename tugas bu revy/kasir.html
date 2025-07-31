@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .kotak {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar-kasir {
+            width: 250px;
+            background-color: #1f2937;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sidebar-kasir h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-kasir nav ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .sidebar-kasir nav ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar-kasir nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #2e7d32;
+        }
+
+        .sidebar-kasir nav ul li a:hover {
+            background-color: #154e17;
+        }
+
+        .tombol-logout {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Main Content */
+        .konten-utama {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+
+        .konten-utama header h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Form Section */
+        .form-transaksi {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .form-grup {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        .tombol-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tombol-form .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .btn.tambah {
+            background-color: #2e7d32;
+        }
+
+        .btn.reset {
+            background-color: #d32f2f;
+        }
+
+        .btn.tambah:hover {
+            background-color: #1565c0;
+        }
+
+        .btn.reset:hover {
+            background-color: #c62828;
+        }
+
+        /* Table Section */
+        .tabel-transaksi {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        /* Action Buttons */
+        .tombol-aksi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .tombol-aksi .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .btn.bayar {
+            background-color: #4caf50;
+        }
+
+        .btn.cetak, .btn.simpan {
+            background-color: #2196f3;
+        }
+
+        .btn.bayar:hover {
+            background-color: #388e3c;
+        }
+
+        .btn.cetak:hover, .btn.simpan:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="kotak">
+        <aside class="sidebar-kasir">
+            <h2>KASIR</h2>
+            <img src="kasir-avatar.png" alt="Kasir Avatar" style="width:100px; margin-bottom:20px;">
+            <nav>
+                <ul>
+                    <li><a href="#">Kelola Transaksi</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="konten-utama">
+            <header>
+                <h1>Form Transaksi</h1>
+            </header>
+            <section class="form-transaksi">
+                <div class="form-grup">
+                    <label for="menu">Pilih Menu</label>
+                    <select id="menu">
+                        <option value="">Kode - Nama Menu</option>
+                        <option value="fan01">Fanta Strawberry</option>
+                        <option value="cola01">Coca-Cola</option>
+                    </select>
+                </div>
+                <div class="form-grup">
+                    <label for="quantity">Quantitas</label>
+                    <input type="number" id="quantity" placeholder="0">
+                </div>
+                <div class="form-grup">
+                    <label for="price">Harga Satuan</label>
+                    <input type="text" id="price" value="Rp. 20.000" disabled>
+                </div>
+                <div class="form-grup">
+                    <label for="total">Total Harga</label>
+                    <input type="text" id="total" value="Rp. 200.000" disabled>
+                </div>
+                <div class="tombol-form">
+                    <button type="button" class="btn tambah">Tambah</button>
+                    <button type="button" class="btn reset">Reset</button>
+                </div>
+            </section>
+            <section class="tabel-transaksi">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Transaksi</th>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Harga Satuan</th>
+                            <th>Quantitas</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TR175</td>
+                            <td>fan01</td>
+                            <td>chocolate</td>
+                            <td>Rp.20.000</td>
+                            <td>10</td>
+                            <td>Rp.200.000</td>
+                        </tr>
+                        <tr>
+                            <td>TR176</td>
+                            <td>dur01</td>
+                            <td>durian</td>
+                            <td>Rp.100.000</td>
+                            <td>10</td>
+                            <td>Rp.1.00.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tombol-aksi">
+                    <button class="btn bayar">Bayar</button>
+                    <button class="btn cetak">Print</button>
+                    <button class="btn simpan">Simpan</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

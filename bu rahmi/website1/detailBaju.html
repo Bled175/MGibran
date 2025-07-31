@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk Gamis</title>
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100vw;
+      max-width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
+      grid-auto-rows: 300px;
+      gap: 10px;
+    }
+
+    .gallery img {
+      margin-left: 50px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .info {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      float: right;
+    }
+
+    .info select,
+    .info button {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .buy-button {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+    }
+    .price {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .gallery,
+      .info {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="gallery">
+        <img src="foto/full.png" alt="Gamis depan" />
+        <img src="foto/fullBelakang.png" alt="Gamis belakang" />
+        <img src="foto/gamisDepan.png" alt="Detail lengan" />
+        <img src="foto/gamisDepan.png" alt="Detail depan" />
+      </div>
+      <div class="info">
+        <h2>Gamis Basic</h2>
+        <p><strong>Material:</strong> Poly tekstur</p>
+        <p><strong>Size:</strong> S, M, L, XL, 2XL ukuran dewasa</p>
+        <p>
+          Gamis Basic dengan bahan poly tekstur yang memiliki handfeel material
+          yang halus, nyaman, ironless. Detail produk resleting belakang dan
+          lengan karet yang wudhu friendly.
+        </p>
+        <label for="size">Size</label>
+        <select id="size">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="2XL">XXL</option>
+        </select>
+        <div class="price">Rp.200.000</div>
+        <a href="bayar.html"><button class="buy-button">BUY</button></a>
+      </div>
+    </div>
+  </body>
+</html>

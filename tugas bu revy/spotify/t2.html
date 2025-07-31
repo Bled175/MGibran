@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone - HTML Only</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-zinc-900 p-6 hidden md:block transition-all duration-300 rounded-r-lg">
+      <h1 class="text-2xl font-semibold text-green-400 mb-6">Spotify</h1>
+      <nav>
+        <ul>
+          <li class="mb-4">
+            <a href="#" class="flex items-center text-gray-300 hover:text-white transition duration-200">
+              <span class="mr-3">🏠</span> Beranda
+            </a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="flex items-center text-gray-300 hover:text-white transition duration-200">
+              <span class="mr-3">🔍</span> Telusuri
+            </a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="flex items-center text-gray-300 hover:text-white transition duration-200">
+              <span class="mr-3">📚</span> Perpustakaan
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="mt-6 w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-200">
+        + Buat Playlist
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8 overflow-y-auto">
+      <header class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Beranda</h2>
+        <div class="relative w-80">
+          <input type="text" placeholder="Cari musik..."
+            class="bg-zinc-800 text-white pl-4 pr-10 py-2 rounded-lg w-full focus:ring-2 focus:ring-green-500 focus:outline-none transition-all">
+          <span class="absolute right-4 top-2 text-gray-400">🔍</span>
+        </div>
+      </header>
+
+      <!-- Playlist Section -->
+      <section>
+        <h3 class="text-lg font-semibold mb-4">Rekomendasi Artis</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <!-- Card Example -->
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732f7bb02cb4b74bd7c2406428" alt="Mahalini" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Mahalini</h4>
+            <p class="text-gray-400 text-sm mb-2">Penyanyi dan Penulis Lagu Indonesia</p>
+            <audio controls class="w-full mt-2">
+              <source src="https://p.scdn.co/mp3-preview/your-audio-file.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <!-- Duplikat kartu untuk artis lain, sesuaikan src audio dan gambar -->
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732e174e3408085b7022c05483" alt="Lyodra" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Lyodra</h4>
+            <p class="text-gray-400 text-sm mb-2">Penyanyi dan Pemeran Indonesia</p>
+            <audio controls class="w-full mt-2">
+              <source src="https://p.scdn.co/mp3-preview/another-audio-file.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <!-- Tambahkan kartu lainnya sama format -->
+
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

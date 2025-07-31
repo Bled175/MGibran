@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXO Shop</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #fff;
+      }
+      header {
+        background: #000;
+        color: #fff;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .search-bar input {
+        padding: 6px;
+        font-size: 14px;
+      }
+      .nav {
+        background: #111;
+        color: white;
+        display: flex;
+        padding: 10px 20px;
+        justify-content: space-between;
+      }
+      .nav div {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        padding: 20px;
+        background: #000;
+      }
+      .product {
+        background: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+      .search {
+        width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">EXO</div>
+      <div class="search-bar">
+        <input class="search" type="text" placeholder="Search" />
+      </div>
+      <div class="logo">Shop</div>
+    </header>
+
+    <div class="nav">
+      <div>SALE</div>
+      <div>NEW PRODUCT</div>
+      <div>PAKAIAN</div>
+      <div>EXO MEN</div>
+      <div>SCARF</div>
+      <div>EXO KIDS</div>
+    </div>
+
+    <div class="products">
+      <a href="detailBaju.html"><div class="product"><img src="foto/full.png" alt="Produk 1" /></div></a>
+      <div class="product"><img src="foto/th (2).jpg" alt="Produk 2" /></div>
+      <div class="product"><img src="foto/th (3).jpg" alt="Produk 3" /></div>
+      <div class="product"><img src="foto/th (4).jpg" alt="Produk 4" /></div>
+      <div class="product"><img src="foto/th (5).jpg" alt="Produk 5" /></div>
+      <div class="product"><img src="foto/th (6).jpg" alt="Produk 6" /></div>
+      <div class="product"><img src="foto/th (7).jpg" alt="Produk 7" /></div>
+      <div class="product"><img src="foto/th (8).jpg" alt="Produk 8" /></div>
+      <div class="product"><img src="foto/th (9).jpg" alt="Produk 9" /></div>
+      <div class="product"><img src="foto/th (10).jpg" alt="Produk 10" /></div>
+    </div>
+  </body>
+</html>

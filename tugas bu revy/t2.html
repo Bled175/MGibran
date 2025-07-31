@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <div class="flex h-screen">
+    
+    <!-- Sidebar -->
+    <aside class="w-64 bg-zinc-900 p-6 hidden md:block transition-all duration-300 rounded-r-lg">
+      <h1 class="text-2xl font-semibold text-green-400 mb-6">Spotify</h1>
+      <nav>
+        <ul>
+          <li class="mb-4">
+            <a href="#" class="flex items-center text-gray-300 hover:text-white transition duration-200">
+              <span class="mr-3">🏠</span> Beranda
+            </a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="flex items-center text-gray-300 hover:text-white transition duration-200">
+              <span class="mr-3">🔍</span> Telusuri
+            </a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="flex items-center text-gray-300 hover:text-white transition duration-200">
+              <span class="mr-3">📚</span> Perpustakaan
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="mt-6 w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-200">
+        + Buat Playlist
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8">
+      <header class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Beranda</h2>
+        <div class="relative w-80">
+          <input type="text" placeholder="Cari musik..." 
+            class="bg-zinc-800 text-white pl-4 pr-10 py-2 rounded-lg w-full focus:ring-2 focus:ring-green-500 focus:outline-none transition-all">
+          <span class="absolute right-4 top-2 text-gray-400">🔍</span>
+        </div>
+      </header>
+
+      <!-- Playlist Section -->
+      <section>
+        <h3 class="text-lg font-semibold mb-4">Rekomendasi Artis </h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <!-- Card -->
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732f7bb02cb4b74bd7c2406428" alt="Cover Playlist 1" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Mahalini </h4>
+            <p class="text-gray-400 text-sm">Penyanyi dan Penulis Lagu Indonesia</p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab67616d0000b2732e174e3408085b7022c05483" alt="Cover Playlist 2" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Lyodra</h4>
+            <p class="text-gray-400 text-sm">Penyanyi dan Pemeran Indonesia</p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/aa00c69e1014b62725a65beabb7fa3c3d05e9ed7" alt="Cover Playlist 3" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Ghea Indrawari </h4>
+            <p class="text-gray-400 text-sm">Penyanyi-Penulis Lagu dan Aktris Indonesia</p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.pinimg.com/originals/38/ff/9a/38ff9ad9397dfa6ed2f9849d6faf8e76.jpg" alt="Cover Playlist 4" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Afgan</h4>
+            <p class="text-gray-400 text-sm">Penyanyi dan Penulis Lagu Indonesia</p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab6761610000e5ebbf753c009fd9c2d53351dd3c" alt="Cover Playlist 4" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Alan Walker </h4>
+            <p class="text-gray-400 text-sm">Produser Musik dan DJ Norwegia </p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab6761610000e5eb7ee542870d73b28e7bd50937" alt="Cover Playlist 4" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Judika </h4>
+            <p class="text-gray-400 text-sm">Penyanyi dan Aktor Indonesia </p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab67706f00000002b75cdf3f088c129cc350c0f8" alt="Cover Playlist 4" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">One Direction  </h4>
+            <p class="text-gray-400 text-sm"> Band </p>
+          </div>
+          <div class="bg-zinc-800 p-3 rounded-lg hover:bg-zinc-700 transition duration-200 cursor-pointer shadow-lg">
+            <img src="https://i.scdn.co/image/ab6761610000e5eb96bfa9ff288138f3432e0fa4" alt="Cover Playlist 4" class="w-full rounded-lg mb-3">
+            <h4 class="font-medium">Dewa 19</h4>
+            <p class="text-gray-400 text-sm">Grup Musik </p>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
